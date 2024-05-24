@@ -20,9 +20,9 @@ What's the version that you have?
 
 We'll use the Green Taxi Trip Records dataset to predict the duration of each trip. 
 
-Download the data for January, February and March 2023 in parquet format from [here](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+Download thmlflow server --backend-store-uri sqlite:///mlflow.dbe data for January, February and March 2023 in parquet format from [here](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
-Use the script `preprocess_data.py` located in the folder [`homework`](homework) to preprocess the data.
+Use the sc*ript `preprocess_data.py` located in the folder [`homework`](homework) to preprocess the data.
 
 The script will:
 
