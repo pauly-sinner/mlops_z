@@ -74,7 +74,12 @@ def run_register_model(data_path: str, top_n: int):
 
     # Register the best model
     # mlflow.register_model( ... )
-
+    runs = client.search_runs(experiment_ids=[experiment.experiment_id])
+    # Поиск лучшего запуска
+    best_run = min(runs, key=lambda run: run.data.metrics['test_rmse'])
+    best_run_id = best_run.info.run_id
+    model_uri = f"runs:/{best_run_id}/model"
+    mlflow.register_model(model_uri=model_uri, name="green-taxi-rf-model")
 
 if __name__ == '__main__':
     run_register_model()
